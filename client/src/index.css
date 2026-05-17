@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-blood-50: #fff1f2;
+  --color-blood-100: #ffe4e6;
+  --color-blood-500: #e11d48;
+  --color-blood-600: #be123c;
+  --color-blood-700: #9f1239;
+  --color-blood-900: #4c0519;
+
+  /* Fonts */
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+}
