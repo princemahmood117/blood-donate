@@ -101,7 +101,9 @@ export const SocketProvider = ({ children }) => {
       return;
     }
 
-    const socket = io("http://localhost:5000");
+    // const socket = io("http://localhost:5000");
+    const socket = io(`${import.meta.env.VITE_BACKEND_API}`);
+    
     socketRef.current = socket;
 
     // Join personal room for targeted feedback notifications
