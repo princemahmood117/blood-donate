@@ -88,7 +88,19 @@ const io = new Server(httpServer, {
   },
 });
 
-app.use(cors({ origin: process.env.CLIENT_URL }));
+// app.use(cors({ origin: process.env.CLIENT_URL, }));
+app.use(
+  cors({
+    origin: [
+      process.env.CLIENT_URL,
+      "https://blood-donate-front.vercel.app",
+      "https://socket.io/docs/v4/client-api",
+      "https://socket.io",
+    ],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 app.use((req, res, next) => {
